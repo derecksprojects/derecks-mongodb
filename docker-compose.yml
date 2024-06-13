@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:latest
+    restart: unless-stopped
+    container_name: linode_singular-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '${DOCKER_EXPOSE_PORT}:27017'
+    networks:
+      - singular-network
+    command: mongod --auth
+
+networks:
+  singular-network:
+    external: true
+
+volumes:
+  mongo-data:
+    name: singular-mongo-data
+    driver: local
