@@ -3,7 +3,7 @@ services:
   mongo:
     image: mongo:latest
     restart: unless-stopped
-    container_name: linode_singular-mongodb
+    container_name: linode_dereck-mongodb
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
@@ -12,14 +12,14 @@ services:
     ports:
       - '${DOCKER_EXPOSE_PORT}:27017'
     networks:
-      - singular-network
+      - dereck-network
     command: mongod --auth
 
 networks:
-  singular-network:
+  dereck-network:
     external: true
 
 volumes:
   mongo-data:
-    name: singular-mongo-data
+    name: dereck-mongo-data
     driver: local
