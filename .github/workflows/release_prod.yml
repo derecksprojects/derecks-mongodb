@@ -1,12 +1,12 @@
 name: Release Prod Docker image to Linode
 
-# on:
-#   release:
-#     types: [published]
 on:
-  push:
-    branches-ignore:
-      - 'master'
+  release:
+    types: [published]
+# on:
+#   push:
+#     branches-ignore:
+#       - 'master'
 jobs:
   deploy_to_linode:
     runs-on: ubuntu-latest
