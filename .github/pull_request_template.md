@@ -6,7 +6,3 @@ https://singular-ai.atlassian.net/browse/<TICKET-ID>
 
 - [ ] Version bump
 - [ ] Prettier
-
-# tests updated
-
-- [ ] integration test

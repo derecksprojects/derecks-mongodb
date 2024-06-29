@@ -1,6 +1,6 @@
 # dereck-mongodb
 
-Image with configurations for mongodb.
+Automated `CI`/`CD` of `MongoDB` with `docker-compose.yml` and `.github/workflows` for `GitHub Actions`.
 
 ## security
 
@@ -33,7 +33,6 @@ mongodb://admin:password@104.200.17.204:27017/
 
 ```bash
 ssh root@104.200.17.204
-ssh dereck@104.200.17.204
 ```
 
 ## persistent data across deleted containers/restarts
