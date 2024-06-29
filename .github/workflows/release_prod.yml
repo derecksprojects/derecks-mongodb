@@ -36,7 +36,7 @@ jobs:
             cd /root/docker-compose-mongo/
             docker compose -f docker-compose.yml pull
             docker compose -f docker-compose.yml down
+            docker compose -f docker-compose.yml --project-name derecks_mongodb-prod down
             docker container prune -f
-            docker image prune -f
-            docker volume prune -f
+            docker system prune -af
             docker compose -f docker-compose.yml up -d
