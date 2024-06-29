@@ -1,6 +1,6 @@
 # dereck-mongodb
 
-Automated `CI`/`CD` of `MongoDB` with `Dockerfile` + `docker-compose.yml`.
+Automated `CI`/`CD` of `MongoDB` with `docker-compose.yml` and `.github/workflows` for `GitHub Actions`.
 
 ## security
 
